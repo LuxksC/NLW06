@@ -29,6 +29,13 @@ HTML -> Hyper text markup language
     - <meta charset="UTF-8"> Serve para ajustar a formatação do seu código a todos os navegadores, sem ela essaformatação pode dar errado.
     - <meta name="viewport" content="width=device-width, initial-scale=1.0"> Define que a largura da sua área visível é igual a largura do dispositvo em que seu site está sendo visualizado. Jáo initial-scale define que a escala da usa viewport será igual a 1, evitando distorções.
 
+- Identificador único (ID):
+
+  - Ele facilita a comunicação entre HTML e o CSS
+  - Caso eu queira me referir a um elemento específico do código HTML dentro do CSS, eu posso criar um ID para ele;
+  - Exemplo: <header id="header">
+  - Nesse caso, o header em que for adicionado esse ID, poderá ser chamado no código CSS através da Hash: #header;
+
 - Estrutura HTML:
 
   - Você deveolhar para os elementos de design e identificar a qual tag cada um deles pertence;
@@ -77,6 +84,7 @@ CSS --> Cascating Style Sheets
     propriedade:#value;
     }
   - seletor = h1/main/header/section...
+  - - = seletor universal
 
 - Estrutura em cascata:
 
@@ -87,7 +95,22 @@ CSS --> Cascating Style Sheets
       <img src="https://devopedia.org/images/article/291/7219.1602765579.svg" alt="Ordem de especificidade do CSS" />
 
 - Reset:
+
   - O Navegador já vem com uma formatação padrão então para garantir que estamos partindo do zero em qualquer navegador, adicionamos a primeira linha do Código CSS o comando /_ RESET _/
+
+- Propriedades de espaçamento no CSS:
+  <img src="https://i.stack.imgur.com/tOwij.png" alt="imagem detalhando as propriedades de espaçamento do CSS">
+
+- Propriedades:
+
+  - Exemplos: margin, padding, border, etc.
+  - boz-sizing --> Define a forma como o CSS irá interpretar o tamanho que é dado para uma caixa;
+  - box-sizing: border-box --> Define que o tamanho dado em wideth e high será equivalente ao tamanho da borda e os demais tamanhos que serão dados como padding ou content serãodiminuidos desses valores;
+
+- Unidades:
+  - Unidade relativa: se ajusta conforme o dispositivo(rem);
+  - Unidade fixa: não irá se ajustar, terá sempre o mesmo tamanho(px);
+  - 1 rem = 16px --> Caso o font-size do seletor root estiver classificado como 100%, caso isso mude o tamanho de todo o resto irá mudar junto;
 
 ## Integrações entre linguagens
 
