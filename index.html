@@ -1,25 +1,61 @@
 <!DOCTYPE html>
+<!--Definição da linguagem do código-->
 <html lang="pt_BR">
+  <!--Configurações da página-->
   <head>
+    <!--Tag usada para padronização da formatação entre os browsers-->
     <meta charset="UTF-8" />
+    <!--Ajuste do tamanho da viewport a tela usada-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Título da página-->
     <title>Irmãos Castro Festas</title>
+    <!--Link com o CSS (arquivo style.css)-->
     <link rel="stylesheet" href="style.css" />
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
+  <!--Corpo da página - Parte visível-->
   <body>
+    <!--Menu de topo dapágina-->
     <header id="header">
-      <!--Imagem da logo da loja-->
-      <img src="" alt="" />
-      <div>...</div>
+      <nav class="container">
+        <!--Nome da loja-->
+        <a class="logo" href="#">Irmãos Castro <span>Festas</span></a>
+        <!--menu-->
+        <div class="menu">...</div>
+      </nav>
     </header>
+    <!--Seções principais da página-->
     <main>
-      <img src="" alt="" />
-      <h1>A vida é feita de sonhos e festa</h1>
-      <p>
-        Nossa missão é fazer com que cada detalhe aconteça do jeito que você
-        planejou.
-      </p>
-      <a href="">Veja nossos produtos</a>
+
+      <section class="section" id="home">
+        <div class="container grid">
+          <div class="image">
+            <!--Imagem de apresentação-->
+            <img src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmlydGhkYXklMjBwYXJ0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Enfeites de festa de aniversários" />
+          </div>
+          <div class="text">
+            <!--Slogan da loja-->
+            <h1>A vida é feita de sonhos e festa</h1>
+            <!--Missão da loja-->
+            <p>Nossa missão é fazer com que cada detalhe aconteça do jeito que você planejou.</p>
+            <!--Link parao Instagram da loja ou página com produtos-->
+            <a class="button" href="#">Veja nossos produtos</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <section class="section">
+        <div class="container">
+          outra seção
+        </div>
+      </section>
+
     </main>
   </body>
 </html>
