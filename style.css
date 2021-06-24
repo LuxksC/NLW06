@@ -7,17 +7,23 @@
   box-sizing: border-box;
 }
 
-a{
+ul {
+  list-style: none;
+}
+
+/*Anulamento da decoração automática dada aos links no HTML*/
+a {
   text-decoration: none;
 }
 
-img{
+/*Definimos para toda tag img que não tenha nenhum referência abaixo dessa um tamanho de 100% e uma alturaque se ajuste a isso*/
+img {
   width: 100%;
   height: auto;
 }
 
 /*===== VARIABLES ====================================*/
-:root{
+:root {
   --header-height: 4.5rem;
 
   /* colors */
@@ -33,69 +39,81 @@ img{
 }
 
 /*======== BASE =====================*/
-body{
-  font: 400 1rem "Open Sans", sans-serif;
+/*Deginições padrões para todo body com suavização*/
+body {
+  font: 400 1rem 'Open Sans', sans-serif;
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 
-h1{
-  font: 700 1.875rem "Roboto", sans-serif;
+/*Deginições padrões para todos os títulos*/
+.title {
+  font: 700 1.875rem 'Roboto', sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
 
-.button{
+.button {
   background-color: var(--base-color);
   color: var(--text-color-light);
   height: 3.5rem;
+  /*Como a tag a define as margens coladas no elemento, mudamos o display para que as margens do button não ficassem coladas nele*/
   display: inline-flex;
+  /*Alinhamento do texto(elemento dentro do button) no centro*/
   align-items: center;
+  /*Definição de espaçamento lateral do button*/
   padding: 0 2rem;
+  /*filetes (radius) das bordas do button*/
   border-radius: 0.25rem;
-  font: 600 1rem "Open Sans", sans-serif;
+  font: 600 1rem 'Open Sans', sans-serif;
   /*Tempo que dura a transição ao posicionar mouse no button*/
   transition: background 0.3s;
 }
 
 /*Efeito de transição ao botar mouse sobre o button*/
-.button:hover{
+.button:hover {
+  /*Sugestão: testa outros efeitos que não estejam ligados a background*/
   /*cor final após o efeito de transição aplicado sobre o button*/
   background: var(--base-color-alt);
 }
 
-.divider-1{
+/*divisor entre seções*/
+.divider-1 {
   height: 1px;
   background: linear-gradient(
-    270deg,
-    hsla(var(--hue), 36%, 57%, 1) 0%,
-    hsla(var(--hue), 65%, 88%, 0.34) 100%
+    /*direção do gradiente*/ 270deg,
+    /*cor inicial*/ hsla(var(--hue), 36%, 57%, 1) 0%,
+    /*cor final*/ hsla(var(--hue), 65%, 88%, 0.34) 100%
   );
 }
 /*===== LAYOUT ===============================*/
-
+/*definições de margem dos elementos dentro da classe container*/
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-
 }
 
-.grid{
+.grid {
+  /*estabelece um espaçamento padrão entre elementos*/
   display: grid;
   gap: 2rem;
 }
 
-.section{
+.section {
+  /*definção de espaçamento vertical para elementos dentro da classe section*/
   padding: 5rem 0;
 }
 
-/*Configuração do header com a ID header atribída a ele*/
+/*Configuração do header com a ID header atribuída a ele*/
 #header {
+  /*linha que separa o header do resto*/
   border-bottom: 1px solid #e4e4e4;
+  /*Acredito que esse margin bottom possa ser eliminado uma vez que o header está acima dos outros elementos*/
   margin-bottom: 2rem;
   display: flex;
 
+  /*Configuração para que o header esteja sempre acima dos outros elementos e se mova junto com a página*/
   width: 100%;
   position: fixed;
   top: 0;
@@ -104,72 +122,168 @@ h1{
   background-color: var(--body-color);
 }
 
+.logo {
+  /*fonte e cor base da logo*/
+  font: 700 1.31rem 'Roboto', sans-serif;
+  color: var(--title-color);
+}
+
+.logo span {
+  /*cor do elemento spam dentro da logo. Assim colorimos uma unicasentença com várias cores*/
+  color: var(--base-color);
+}
+
+main {
+  /*como header está acima do resto, tivemos que estabelecer uma margem do topo*/
+  margin-top: calc(var(--header-height) + 2rem);
+}
+
+/*====== NAVIGATION ====================*/
 nav {
+  /*define altura que os elementos dentro do nav ocupam, automaticamente definindo a do header*/
   height: var(--header-height);
   display: flex;
+  /*align e justify fazem comque a logo e o menu estejam no centro e em cantos opostos*/
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
-.logo{
-  font: 700 1.31rem "Roboto", sans-serif;
-  color: var(--title-color);
+nav ul li {
+  text-align: center;
 }
 
-.logo span{
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover {
   color: var(--base-color);
 }
 
-main{
-  margin-top: var(--header-height);
+nav ul li a::after {
+  content: '';
+  height: 2px;
+  width: 0;
+
+  background: var(--base-color);
+
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+  transition: width 0.2s;
 }
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*Mostrar menu - Show*/
+/*o comando nav.show sem espaço funciona como se fosse um if. Se nav tiver a classe show, atribua as demais propriedades.
+A lógica disso é construída no JS*/
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+
+  background: var(--body-color);
+
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: grid;
+  place-content: center;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
+
+/* toggle menu */
+/* Fechando e abertura do icone de close e menu*/
+/*Classe toogle define as característigas usadas no ícone de menu e close*/
+.toogle {
+  color: var(--base-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav .icon-close {
+  opacity: 0;
+  visibility: hidden;
+
+  position: absolute;
+  right: 1.5rem;
+}
+
+nav.show .icon-close {
+  opacity: 1;
+  visibility: visible;
+}
+
 /*======= HOME ===========*/
-#home{
+#home {
   /*Corta tudo que estiver fora da área determinada pelo home*/
   overflow: hidden;
 }
 
-#home .container{
+#home .container {
+  /*joga todos os elementos do home para esquerda*/
   margin: 0;
 }
 
-#home .image{
+#home .image {
   /*Definimos esse posicionamento como relativo para que o posicionamento do elemento fantasma sejarelativo em relação a imagem*/
   position: relative;
 }
 
-#home .image::before{
+/*elemento fantasma, não aparece no códgio HTML*/
+#home .image::before {
   content: '';
   height: 100%;
   width: 100%;
+  /*posição definida como absolute, porém é relativa a imagem*/
   position: absolute;
   background: var(--base-color-second);
+  /*porcentagens definidas com base no tamanho da imagem original*/
   top: -16.8%;
   left: 16.8%;
+  /*garantia de que o elemento estará atrás da imagem*/
   z-index: 0;
 }
 
-#home .image img{
+#home .image img {
   position: relative;
+  /*garante que a imagem esteja a uma distância específica da borda lateral direita*/
   right: 2.93rem;
 }
-
+/*definiçãode uma propriedade para 2 seletores*/
 #home .image img,
-#home .image::before{
+#home .image::before {
   border-radius: 0.25rem;
-} 
+}
 
-#home .text{
+#home .text {
+  /*alinhamento horizontal*/
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  /*alinhamento vertical*/
   text-align: center;
 }
 
-#home .text h1{
+#home .text h1 {
   margin-bottom: 1rem;
 }
 
-#home .text p{
+#home .text p {
   margin-bottom: 2rem;
 }

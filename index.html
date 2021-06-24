@@ -9,53 +9,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Título da página-->
     <title>Irmãos Castro Festas</title>
+
+    <!--  Icones  -->
+    <link rel="stylesheet" href="assets/fonts/style.css" />
+
     <!--Link com o CSS (arquivo style.css)-->
     <link rel="stylesheet" href="style.css" />
 
     <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <!--Corpo da página - Parte visível-->
   <body>
-    <!--Menu de topo dapágina-->
+    <!--Menu de topo da página-->
     <header id="header">
-      <nav class="container">
+      <!--Atributos clicáveis-->
+      <nav class="container show">
         <!--Nome da loja-->
         <a class="logo" href="#">Irmãos Castro <span>Festas</span></a>
         <!--menu-->
-        <div class="menu">...</div>
+        <div class="menu">
+          <!--menu begin-->
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#products">Produtos</a></li>
+            <li><a class="title" href="#contact">Contatos</a></li>
+          </ul>
+          <!--menu end-->
+        </div>
+        <div class="toogle icon-menu"></div>
+        <div class="toogle icon-close"></div>
       </nav>
     </header>
     <!--Seções principais da página-->
     <main>
-
+      <!--Seção inicial - home-->
       <section class="section" id="home">
+        <!--Definição de uma classe para estabaelecer as margens laterais do conteúdo-->
+        <!--grid ajudano espaçamento da imagem e do elemento fantasma-->
+        <!--representação de duas classes atribuídas a uma tag-->
         <div class="container grid">
+          <!--Separamos a imagem e o texto em duas divs,uma em cada classe para conseguir atribuir propriedades diferentes no CSS-->
           <div class="image">
             <!--Imagem de apresentação-->
-            <img src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmlydGhkYXklMjBwYXJ0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Enfeites de festa de aniversários" />
+            <img
+              src="https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmlydGhkYXklMjBwYXJ0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt="Enfeites de festa de aniversários"
+            />
           </div>
           <div class="text">
             <!--Slogan da loja-->
-            <h1>A vida é feita de sonhos e festa</h1>
+            <h2 class="title">A vida é feita de sonhos e festa!</h2>
             <!--Missão da loja-->
-            <p>Nossa missão é fazer com que cada detalhe aconteça do jeito que você planejou.</p>
+            <p>
+              Nossa missão é fazer com que cada detalhe aconteça do jeito que
+              você planejou.
+            </p>
             <!--Link parao Instagram da loja ou página com produtos-->
             <a class="button" href="#">Veja nossos produtos</a>
           </div>
         </div>
       </section>
 
+      <!--Essa linha representa o divisor em degradê que separa as seções-->
+      <!--Pergunta: será possível definir um border color com degradê para anular a necessidade de uma classe divider?-->
       <div class="divider-1"></div>
 
-      <section class="section">
-        <div class="container">
-          outra seção
-        </div>
+      <!--Segunda seção da página-->
+      <!--Emmet: section.section#about>.container.grid-->
+      <section class="section" id="about">
+        <div class="container grid">Sobre</div>
       </section>
 
+      <section class="section" id="services">
+        <div class="container grid">Serviços</div>
+      </section>
     </main>
   </body>
 </html>

@@ -37,6 +37,7 @@ HTML -> Hyper text markup language
   - Nesse caso, o header em que for adicionado esse ID, poderá ser chamado no código CSS através da Hash: #header;
 
 - Classe (class):
+
   - É um atributo com a mesma função do ID, porém uma classe pode ser atribída a várias tags, já um ID só será atribuído a uma única Tag.
   - A classe é chamada no CSS através de um ponto: .nomedaclasse
 
@@ -52,7 +53,7 @@ HTML -> Hyper text markup language
     - <a> = link;
     - <nav> --> declara que dentro dessa tag irão existir elementos clicáveis (links);
     - <span> --> Cria uma separação entre elementos mas deixa um elemento dentro do outro;
-    - <div> --> cria uma separação e por padrão deixa um elemento abaixo do outro. 
+    - <div> --> cria uma separação e por padrão deixa um elemento abaixo do outro.
   - Para que o código não fique uma zona, precisamos dividir ele em caixas:
     -A caixa superior em que geralmente ficam os menus, se chama header.
   - No caso do nosso arquivo ele está separado em:
@@ -103,6 +104,7 @@ CSS --> Cascating Style Sheets
     - Podemos nos referenciar a um elemneto que está dentro de outro no CSS. Exemplo, se eu tenho um elemento no HTML do tipo <nav class="container">, posso me referenciar a esse elemento específico no CSS como nav.container{} ou se ele está dentro de um header com id="header", posso me referenciar a ele como #header nav {}
 
 - Separação dasatribuições do CSS:
+
   - No caso do nosso código, classificamos as partes da nossa cascata em:
     - RESET
     - BASE
@@ -124,14 +126,17 @@ CSS --> Cascating Style Sheets
   - box-sizing: border-box --> Define que o tamanho dado em wideth e high será equivalente ao tamanho da borda e os demais tamanhos que serão dados como padding ou content serãodiminuidos desses valores;
 
 - Unidades:
+
   - Unidade relativa: se ajusta conforme o dispositivo(rem);
   - Unidade fixa: não irá se ajustar, terá sempre o mesmo tamanho(px);
   - 1 rem = 16px --> Caso o font-size do seletor root estiver classificado como 100%, caso isso mude o tamanho de todo o resto irá mudar junto;
 
 - Classe container
-  - Quando todos os elementos da página seguem um espaçamento padrão, é normal definirmos uma classe chamada container para guardar os atributos de espaçamento dados a esses elementos. 
+
+  - Quando todos os elementos da página seguem um espaçamento padrão, é normal definirmos uma classe chamada container para guardar os atributos de espaçamento dados a esses elementos.
 
 - Propriedade Display com valor flex:
+
   - Aparentemente o que ela faz é posicionar os elementos filhos do seletor um do lado do outro
   - O uso dessa propriedade com esse valor possibilita usar outra propriedade chamada justify-content.
     - Essa propriedade aceita os seguintes valores:
@@ -140,20 +145,23 @@ CSS --> Cascating Style Sheets
       - space-between, distribui os elementos igualmente dentro do espaço disponível;
 
 - Text-Decoration
+
   - Essa propriedade pode ser usada no link como "text-decoration: none" para tirar a decoração automática qeu o HTML da para links.
 
 - Definição de variáveis:
+
   - Uma variável no CSS pode ser definida da seguinte forma: "--nomedavariável: valor"
   - Se uma variável é definida no CSS em um elemento pai, ela poderá ser acessada por todos os elementos filhos;
   - Para que uma variável possa ser acessada por todos os elementos do código, é recomendado definirmos ela dentro do elemento ":root";
   - Ao mudar o valor de uma variável, você muda o valor de tudo que está atribuido a ela;
 
-
 - Chamando as variáveis:
+
   - Para chamar uma variável, a sintaxe éa seguinte: "var(--nomedavariável)" esse texto deve ser inserido no lugar do valor ao qual a variável é equivalente;
   - Caso seja digitado apenas "--nomedavariavel" o Emmet irá completar;
 
 - Webkit-font-smooting:
+
   - Propriedade que ajuda a suavizar o texto
   - Não são todos os navegadores que aceitam esse tipo de propriedade mas o Chrome aceita
   - Valores usados na aula para essa propriedade: auto e antialised (deixa a fonte mais fraca)
@@ -168,7 +176,9 @@ CSS --> Cascating Style Sheets
 
 - CSS+HTML
   - Para adicionar linkaro arquivo CSS com o HTML, basta inserir a tag link:css atravésdo Emmet.
+    ...
   - <link rel="tipo de relação" href="nome do arquivo.css">
+    ...
 
 ## Comandos VSCode
 
@@ -214,8 +224,11 @@ CSS --> Cascating Style Sheets
 ## Google Fonts
 
 - Como importar fontes de lá para o código:
+
   - No caso do nosso projeto, apenas escolhemos as fontes no site, copiamos o link gerado pelo google fontes e colamos no cabeçalho da página.
 
 - A adição da fonte a um determinado seletor, id ou classe pode ser feita através do CSS, com a propriedades "font" que recebe como valores a força da fonte, tamanho, nome da fonte e uma fonte substituta.
 
+# Standby
 
+A partir da segunda aula tive que abandonar o Readme para ter tempo de finalizar a aplicação, ele será desenvolvido melhor posteriormente no momento de revisão.
