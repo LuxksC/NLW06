@@ -12,28 +12,28 @@ HTML -> Hyper text markup language
 
 - Fomato de uma tag no HTML:
 
-  - <tag attribute="attribute_value">text</tag>
+  - `<tag attribute="attribute_value">text</tag>`
 
 - Emmet
 
   - Ao digitar ! e dar Enter, ele atribui um cabeçalho ao seu código HTML;
-  - Nesse cabeçalho, é possível mudar a linguagem do seu cógio em <html lang="linguagem">
+  - Nesse cabeçalho, é possível mudar a linguagem do seu cógio em `<html lang="linguagem">`
 
 - Tags:
 
-  - A tag <html> éuma tag do tipo root=raíz, apartir dela teremos outras tags filhas como <head> e <body>
-  - Na tag <head> teremos configurações da página como fontes e links com outros arquivos;
-  - A tag <body> terá todo o conteúdo da página. Ou seja, o que está da URL para baixo;
-  - <!--comentário--> Essa tag define um comentário no HTML;
-  - Tags <meta>:
-    - <meta charset="UTF-8"> Serve para ajustar a formatação do seu código a todos os navegadores, sem ela essaformatação pode dar errado.
-    - <meta name="viewport" content="width=device-width, initial-scale=1.0"> Define que a largura da sua área visível é igual a largura do dispositvo em que seu site está sendo visualizado. Jáo initial-scale define que a escala da usa viewport será igual a 1, evitando distorções.
+  - A tag `<html>` éuma tag do tipo root=raíz, apartir dela teremos outras tags filhas como `<head>` e `<body>`
+  - Na tag `<head>` teremos configurações da página como fontes e links com outros arquivos;
+  - A tag `<body>` terá todo o conteúdo da página. Ou seja, o que está da URL para baixo;
+  - `<!--comentário-->` Essa tag define um comentário no HTML;
+  - Tags `<meta>`:
+    - `<meta charset="UTF-8">` Serve para ajustar a formatação do seu código a todos os navegadores, sem ela essaformatação pode dar errado.
+    - `<meta name="viewport" content="width=device-width, initial-scale=1.0">` Define que a largura da sua área visível é igual a largura do dispositvo em que seu site está sendo visualizado. Jáo initial-scale define que a escala da usa viewport será igual a 1, evitando distorções.
 
 - Identificador único (ID):
 
   - Ele facilita a comunicação entre HTML e o CSS
   - Caso eu queira me referir a um elemento específico do código HTML dentro do CSS, eu posso criar um ID para ele;
-  - Exemplo: <header id="header">
+  - Exemplo: `<header id="header">`
   - Nesse caso, o header em que for adicionado esse ID, poderá ser chamado no código CSS através da Hash: #header;
 
 - Classe (class):
@@ -45,6 +45,7 @@ HTML -> Hyper text markup language
 
   - Você deveolhar para os elementos de design e identificar a qual tag cada um deles pertence;
   - Exemplos:
+    ```
     - <h1> = título
     - <p> = parágrafo
     - <img src="link" alt="">
@@ -54,6 +55,7 @@ HTML -> Hyper text markup language
     - <nav> --> declara que dentro dessa tag irão existir elementos clicáveis (links);
     - <span> --> Cria uma separação entre elementos mas deixa um elemento dentro do outro;
     - <div> --> cria uma separação e por padrão deixa um elemento abaixo do outro.
+    ```
   - Para que o código não fique uma zona, precisamos dividir ele em caixas:
     -A caixa superior em que geralmente ficam os menus, se chama header.
   - No caso do nosso arquivo ele está separado em:
