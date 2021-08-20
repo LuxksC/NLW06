@@ -259,3 +259,56 @@ Após a lista criamos duas divs destinadas aos ícones de abertura e fechamento 
 A lógica do menu é: ao clicar no objeto dentro da div que recebe a classe open, a tag nav que representa o menu deve receber a classe de nome "show" com as propriedades CSS para que o menu seja exibido. Quem faz a mudança da classe é o JavaScript. Essa classe está construída no CSS na seção "nav.show .menu{...}".
 
 Enquanto a classe show não é atribuida a tag nav, ela assume os valores indicados no CSS em "nav .menu{...}"
+
+As animações de cor em cima de cada palavra do menu foram construídas usando hoover(ligado a animações quando o mouse está posicionado em cima do objeto) e o after (cria um elemento novo após o elemento ao qual está se referenciando).
+
+Ao usar o hoover e o after em conjunto, conseguimos fazer a criação da linha abaixo do nome apenas quando o mouse está em cima da palavra.
+
+Para uma próxima tentativa, pode-se tentar fazer a barra abaixo do nome começar a ser criada do meio para os cantos.
+
+## Ícones
+
+Usamos a estratégia de pegar um pack de ícones que já estavam no Figma e transformá-los em um arquivo CSS.
+
+Para fazer isso, temos que importar os ícones em formato SVG para o site <a href="https://icomoon.io/">icomoon.io/app</a>. Nele, podemos também fazer a busca por novos ícones. Ainda por esse site, podemos tirar a cor do ícone e mudar o tamanho deles.
+
+O site irá exportar os ícones como se fossem parte de uma fonte. Mais especificamente, o site gera um arquivo CSS com diversas classes em que cada uma delas corresponde a um ícone. Deve-se lembrar de referenciar esse arquivo através do HTML.
+
+Como esses ícones são interpretados como uma fonte, para mudar o tamanho deles temos que usar o comando font-size.
+
+Em nosso projeto o arquivo se encontra em "assets/fonts/style.css"
+
+Graças a essa estratégia conseguimos atrelar a cor dos ícones a uma variável do CSS.
+
+Vale lembrar que temos que clicar com o botão direito em todos os ícones no Figma e selecionar a opção Outline Stroke, garantindo que não termos problemas posteriormente.
+
+No site <a href="https://react-icons.github.io/react-icons/">React Icons</a> é possível ter acesso a diversos pacotes de ícones.
+
+Geralmente, imagens, ícones, etc, são guardados dentro de uma pasta chamada assets.
+
+## JavaScript
+
+### Comandos
+
+- Comentário = "//comentário"
+- Função alert = "alert(argumento a retornar no alerta)"
+- Procura de documentos do HTML por ID, classe ou tag = document.querySelector('#ID .classe tag'). Para verificar se estamos pegando o elemento certo, podemos jogar esse código no console do dev tools e observar o que vai ser retornado.
+- Procurar elementos que contém um argumento específico dentro = document.querySelectorAll('#ID .classe tag')
+
+### Teoria
+
+Tipos de constantes:
+
+- var = pode ter seu valor alterado em escopo global
+- const = não pode ter seu valor alterado
+- let = pode ter seu valor alterado localmente
+
+Para verificar o retorno do código, podemos observar a aba console do DevTools. Segredo para entender o que está acontecendo.
+
+Se temos constantes que são equivalentes a objetos, podemos ns referir aos valores das chaves desse objeto da seguinte forma: "variavel.nomedachave".
+
+Para referenciar objetos do HTML dentro do JavaScript, usamos a ideia de DOM. Exemplo: documento.style.background = 'red'.
+
+Podemos usar o site <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">MDN Web Docs</a> para entender melhor o que alguns comandos do JS significam.
+
+Para facilitar a referência a elementos do HTML dentro do JavaScript, geralmente criamos constantes que são referentes a um relemento específico do HTML.

@@ -154,7 +154,7 @@ nav ul li {
 }
 
 nav ul li a {
-  transition: color 0.2s;
+  transition: color 0.2s; /*o color está especificando qual propriedade deve estar ligada a essa transição*/
   position: relative;
 }
 
@@ -168,10 +168,10 @@ nav ul li a::after {
   width: 0;
 
   background: var(--base-color);
-
+  /*As definições de tamanho acima são referentes ao elemento que será criado*/
   position: absolute;
   left: 0;
-  bottom: -1.5rem;
+  bottom: -1.5rem; /*Essa distância representa a distância que a linha vai ficar da tela tanto no mobile quanto no desktop*/
   transition: width 0.2s;
 }
 
@@ -214,7 +214,7 @@ nav.show ul.grid {
 .toogle {
   color: var(--base-color);
   font-size: 1.5rem;
-  cursor: pointer;
+  cursor: pointer; /*Muda o ícone do mouse ao passar o mouse em cima do objeto*/
 }
 
 nav .icon-close {
