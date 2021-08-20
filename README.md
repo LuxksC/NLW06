@@ -1,5 +1,7 @@
 # NLW06
 
+# Aula 01
+
 This repository was created for the development of Next Level Week 06 Origins Project
 
 ## Observações iniciais
@@ -55,6 +57,8 @@ HTML -> Hyper text markup language
     - <nav> --> declara que dentro dessa tag irão existir elementos clicáveis (links);
     - <span> --> Cria uma separação entre elementos mas deixa um elemento dentro do outro;
     - <div> --> cria uma separação e por padrão deixa um elemento abaixo do outro.
+    - <ul> --> lista não ordenada
+    - <li> --> item da lista (list item)
     ```
   - Para que o código não fique uma zona, precisamos dividir ele em caixas:
     -A caixa superior em que geralmente ficam os menus, se chama header.
@@ -71,6 +75,8 @@ HTML -> Hyper text markup language
 
   - São Tags que possuem significado e ajudam a montar a estrutura da página.
   - Exemplos:
+
+  ```
     - <header>
     - <main>
       - <section>
@@ -80,12 +86,20 @@ HTML -> Hyper text markup language
   - Um SEO bem desenvolvido pode te ajudar a aparecer nas primeiras páginas do Google;
   - Também ajuda as pessoas com deficiência a navegar pela página;
 
+  ```
+
 - Dicas:
+
   - unsplash.com --> site com imagens gratuítas, buscar em inglês;
     - Nesse site,podemos apenas copiar o endereço da imagem e colar no atríbuto src;
 
+  ```
+
+  ```
+
 ## CSS
 
+```
 CSS --> Cascating Style Sheets
 
 - Sintaxe:
@@ -117,10 +131,12 @@ CSS --> Cascating Style Sheets
 - Reset:
 
   - O Navegador já vem com uma formatação padrão então para garantir que estamos partindo do zero em qualquer navegador, separamos uma parte do CSS para as configurações gerais de formatação dos elementos.
+```
 
 - Propriedades de espaçamento no CSS:
   <img src="https://i.stack.imgur.com/tOwij.png" alt="imagem detalhando as propriedades de espaçamento do CSS">
 
+```
 - Propriedades:
 
   - Exemplos: margin, padding, border, etc.
@@ -173,14 +189,15 @@ CSS --> Cascating Style Sheets
 - Elemento fantasma:
   - Isso foi usado no exemplo da seguinte forma: "#home .image::before{}"
   - Esse comando irá criar um elemento fantasma uma linha acima do elemento que está sendo referenciado, nesse caso seria o elemento com a classe image, dentro do elemento de id home.
+```
 
 ## Integrações entre linguagens
 
+```
 - CSS+HTML
   - Para adicionar linkaro arquivo CSS com o HTML, basta inserir a tag link:css atravésdo Emmet.
-    ...
   - <link rel="tipo de relação" href="nome do arquivo.css">
-    ...
+```
 
 ## Comandos VSCode
 
@@ -231,6 +248,8 @@ CSS --> Cascating Style Sheets
 
 - A adição da fonte a um determinado seletor, id ou classe pode ser feita através do CSS, com a propriedades "font" que recebe como valores a força da fonte, tamanho, nome da fonte e uma fonte substituta.
 
-# Standby
+# Aula 02
 
-A partir da segunda aula tive que abandonar o Readme para ter tempo de finalizar a aplicação, ele será desenvolvido melhor posteriormente no momento de revisão.
+## Hamburguer Menu
+
+Para criar os items da lista, utilizamos as tags`<ul>, <li>, e <a>`. Para que ao clicar nesse item, o usuário seja direcionado a uma seção específica, adicionamos o ID da seção a qual ele deve ser direcionado como referência para o link.
