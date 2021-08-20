@@ -8,7 +8,7 @@
 }
 
 ul {
-  list-style: none;
+  list-style: none; /*Retira os pontinhos das listas que forem criadas*/
 }
 
 /*Anulamento da decoração automática dada aos links no HTML*/
@@ -115,7 +115,7 @@ body {
 
   /*Configuração para que o header esteja sempre acima dos outros elementos e se mova junto com a página*/
   width: 100%;
-  position: fixed;
+  position: fixed; /*comando faz com que o header fique uma camada acima dos demais elementos*/
   top: 0;
   left: 0;
   z-index: 100;
@@ -150,7 +150,7 @@ nav {
 }
 
 nav ul li {
-  text-align: center;
+  text-align: center; /*alinhamento texto hamburguer menu*/
 }
 
 nav ul li a {
@@ -185,7 +185,7 @@ nav .menu {
 }
 
 /*Mostrar menu - Show*/
-/*o comando nav.show sem espaço funciona como se fosse um if. Se nav tiver a classe show, atribua as demais propriedades.
+/*o comando nav.show sem espaço funciona como se fosse um if. Se nav tiver a classe show, atribua as demais propriedades ao elemento com a classe menu dentro de nav.
 A lógica disso é construída no JS*/
 nav.show .menu {
   opacity: 1;
@@ -193,15 +193,15 @@ nav.show .menu {
 
   background: var(--body-color);
 
-  height: 100vh;
+  height: 100vh; /*altura = 100% do viewport height, faz com que se altere de acordo com o dispositivo*/
   width: 100vw;
 
-  position: fixed;
+  position: fixed; /*joga o elemento para uma camada acima dos outros e mantem a posição fixa*/
   top: 0;
   left: 0;
 
   display: grid;
-  place-content: center;
+  place-content: center; /**/
 }
 
 nav.show ul.grid {

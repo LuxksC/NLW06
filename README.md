@@ -253,3 +253,9 @@ CSS --> Cascating Style Sheets
 ## Hamburguer Menu
 
 Para criar os items da lista, utilizamos as tags`<ul>, <li>, e <a>`. Para que ao clicar nesse item, o usuário seja direcionado a uma seção específica, adicionamos o ID da seção a qual ele deve ser direcionado como referência para o link.
+
+Após a lista criamos duas divs destinadas aos ícones de abertura e fechamento do menu que receberam classe open e close
+
+A lógica do menu é: ao clicar no objeto dentro da div que recebe a classe open, a tag nav que representa o menu deve receber a classe de nome "show" com as propriedades CSS para que o menu seja exibido. Quem faz a mudança da classe é o JavaScript. Essa classe está construída no CSS na seção "nav.show .menu{...}".
+
+Enquanto a classe show não é atribuida a tag nav, ela assume os valores indicados no CSS em "nav .menu{...}"
